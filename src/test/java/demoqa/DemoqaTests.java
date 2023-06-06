@@ -38,8 +38,6 @@ public class DemoqaTests extends TestBase {
                 .verifyResult("Hobbies", "Music, Sports")
                 .verifyResult("Picture", "3x.png")
                 .verifyResult("Address", "Москва, Украинский бульвар, д. 6")
-                .verifyResult("State and City", "Александр Ваш")
-                .verifyResult("Student Name", "Александр Ваш")
-                .verifyResult("Student Name", "NCR Delhi");
+                .verifyResult("State and City", "NCR Delhi");
     }
 }

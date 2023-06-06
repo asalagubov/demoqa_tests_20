@@ -8,7 +8,7 @@ import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 
-public class TestBox {
+public class Demoqa {
 
     @BeforeAll
     static void beforeAll() {

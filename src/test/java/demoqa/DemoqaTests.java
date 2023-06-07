@@ -12,13 +12,14 @@ public class DemoqaTests extends TestBase {
     void successTest() {
 
         registrationPage
+                .closeBanners()
                 .openPage()
                 .setFirstName("Александр")
                 .setLastName("Ваш")
                 .setUserEmail("test@mail.ru")
                 .setGender("Other")
                 .setUserNumber("9999999999")
-                .setBirthDay("01", "0", "1997")
+                .setBirthDay("01", "January", "1997")
                 .setSubjects("Arts")
                 .setHobbies("Music", "Sports")
                 .setUploadPicture("3x.png")

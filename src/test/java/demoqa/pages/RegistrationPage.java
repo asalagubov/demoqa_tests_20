@@ -26,12 +26,15 @@ public class RegistrationPage {
             currentAddress = $("#currentAddress"),
             stateInput = $("#state"),
             cityInput = $("#city"),
-            submit = $("#submit"),
-            tableResponsive = $(".table-responsive");
+            submit = $("#submit");
+
 
 
     public RegistrationPage openPage() {
         open("/automation-practice-form");
+        return this;
+    }
+    public RegistrationPage  closeBanners() {
         executeJavaScript("$('#fixedban').remove()");
         executeJavaScript("$('footer').remove()");
         return this;

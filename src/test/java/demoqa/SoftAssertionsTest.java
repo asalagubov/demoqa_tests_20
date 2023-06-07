@@ -19,12 +19,12 @@ public class SoftAssertionsTest {
         open("https://github.com/selenide/selenide");
         //перейти в раздел Wiki проекта:
         $("#wiki-tab").click();
-        //убедиться, что в списке страниц (Pages) есть страница SoftAssertions
+        //убедиться, что в списке страниц (Pages) есть страница SoftAssertions:
         $("#wiki-pages-filter").sendKeys("sof");
         $("a[href='/selenide/selenide/wiki/SoftAssertions']").shouldHave(text("SoftAssertions"));
-        //открыть страницу SoftAssertions
+        //открыть страницу SoftAssertions:
         $("a[href='/selenide/selenide/wiki/SoftAssertions']").click();
-        //проверить что внутри есть пример кода для JUnit5
+        //проверить что внутри есть пример кода для JUnit5:
         $("#wiki-content .markdown-body")
                 .$$("div pre")
                 .findBy(text("@ExtendWith({SoftAssertsExtension.class})"))

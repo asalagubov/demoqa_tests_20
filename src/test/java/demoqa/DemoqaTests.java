@@ -12,8 +12,8 @@ public class DemoqaTests extends TestBase {
     void successTest() {
 
         registrationPage
-                .closeBanners()
                 .openPage()
+                .closeBanners()
                 .setFirstName("Александр")
                 .setLastName("Ваш")
                 .setUserEmail("test@mail.ru")

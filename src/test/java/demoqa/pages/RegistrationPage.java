@@ -17,7 +17,7 @@ public class RegistrationPage {
             firstNameInput = $("#firstName"),
             lastNameInput = $("#lastName"),
             userEmailInput = $("#userEmail"),
-            genterWrapper = $("#genterWrapper"),
+            genderWrapper = $("#genterWrapper"),
             userNumberInput = $("#userNumber"),
             birthDayInput = $("#dateOfBirthInput"),
             subjectsInput = $("#subjectsInput"),
@@ -56,7 +56,7 @@ public class RegistrationPage {
     }
 
     public RegistrationPage setGender(String value) {
-        genterWrapper.$(byText(value)).click();
+        genderWrapper.$(byText(value)).click();
         return this;
     }
 

@@ -7,7 +7,7 @@ import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
-public class SoftAssertionsTest {
+public class SelenideTest1 {
 
     @Test
     void verifyJUnit5CodeExample() {

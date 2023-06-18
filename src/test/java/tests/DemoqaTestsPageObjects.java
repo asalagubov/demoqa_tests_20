@@ -1,11 +1,14 @@
 package demoqa;
 
-import demoqa.pages.RegistrationPage;
-import org.junit.jupiter.api.Test;
 
-public class DemoqaTestFaker extends TestBase {
+import org.junit.jupiter.api.Test;
+import demoqa.pages.RegistrationPage;
+import tests.TestBase;
+
+public class DemoqaTestsPageObjects extends TestBase {
 
     RegistrationPage registrationPage = new RegistrationPage();
+
 
     @Test
     void successTest() {
@@ -20,7 +23,7 @@ public class DemoqaTestFaker extends TestBase {
                 .setUserNumber("9999999999")
                 .setBirthDay("01", "January", "1997")
                 .setSubjects("Arts")
-                .setHobbies("Music", "Sports")
+                .setHobbies("Music")
                 .setUploadPicture("3x.png")
                 .setAddress("Москва, Украинский бульвар, д. 6")
                 .setState("NCR")

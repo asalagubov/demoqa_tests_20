@@ -11,10 +11,12 @@ repositories {
 
 dependencies {
 
-    implementation 'org.testng:testng:7.1.0'
-    implementation 'org.junit.jupiter:junit-jupiter:5.8.1'
-    implementation 'com.codeborne:selenide:6.12.4'
-
+    testImplementation (
+            'org.testng:testng:7.1.0',
+            'org.junit.jupiter:junit-jupiter:5.8.1',
+            'com.codeborne:selenide:6.12.4',
+            'com.github.javafaker:javafaker:1.0.2'
+    )
 
 }
 

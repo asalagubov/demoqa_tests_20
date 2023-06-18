@@ -76,9 +76,12 @@ public class RegistrationPage {
         return this;
     }
 
-    public RegistrationPage setHobbies(String first, String second) {
+    public RegistrationPage setHobbies(String first) {
         hobbiesInput.$(byText(first)).click();
-        hobbiesInput.$(byText(second)).click();
+        return this;
+    }
+    public RegistrationPage setHobbiestwo(String first) {
+        hobbiesInput.$(byText(first)).click();
         return this;
     }
 

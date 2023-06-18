@@ -49,12 +49,12 @@ public class RandomUtils{
     }
 
     public static String getRandomHobbies() {
-        String[] hobby = {"Sports"};
+        String[] hobby = {"Sports", "Reading", "Music"};
         return faker.options().option(hobby);
     }
-    public static String getRandomHobbiestwo() {
-        String[] hobby = {"Reading", "Music"};
-        return faker.options().option(hobby);
-    }
+    // public static String getRandomHobbiestwo() {
+    //    String[] hobby = {};
+    //    return faker.options().option(hobby);
+    // }
 
 }

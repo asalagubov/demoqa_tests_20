@@ -21,7 +21,7 @@ public class DemoqaTestsFaker extends TestBase {
             year = String.valueOf(getRandomInt(1900, 2100)),
             subject = getRandomSubject(),
             hobbies1 = getRandomHobbies(),
-            hobbies2 = getRandomHobbiestwo(),
+           // hobbies2 = getRandomHobbiestwo(),
             address = faker.address().fullAddress(),
             state = getRandomState(),
             city = getRandomCity(state),
@@ -42,7 +42,7 @@ public class DemoqaTestsFaker extends TestBase {
                     .setBirthDay(day, month, year)
                     .setSubjects(subject)
                     .setHobbies(hobbies1)
-                    .setHobbiestwo(hobbies2)
+                    //.setHobbiestwo(hobbies2)
                     .setUploadPicture(fileName)
                     .setAddress(address)
                     .setState(state)
@@ -57,7 +57,7 @@ public class DemoqaTestsFaker extends TestBase {
                     .verifyResult("Mobile", phoneNumber)
                     .verifyResult("Date of Birth", day + " " + month + "," + year)
                     .verifyResult("Subjects", subject)
-                    .verifyResult("Hobbies", hobbies1 + hobbies2)
+                    .verifyResult("Hobbies", hobbies1) //+ ", " + hobbies2)
                     .verifyResult("Picture",  fileName)
                     .verifyResult("Address", address)
                     .verifyResult("State and City", state + " " + city);

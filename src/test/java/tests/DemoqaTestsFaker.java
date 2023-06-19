@@ -1,16 +1,12 @@
 package tests;
 
-import com.github.javafaker.Faker;
 import demoqa.pages.RegistrationPage;
 import org.junit.jupiter.api.Test;
 import utils.RandomUtils;
-
-import java.util.Locale;
 import static utils.RandomUtils.*;
 
 public class DemoqaTestsFaker extends TestBase {
         RegistrationPage registrationPage = new RegistrationPage();
-        RandomUtils randomUtils = new RandomUtils();
     String  firstName = faker.name().firstName(),
             lastName = faker.name().lastName(),
             email = faker.internet().emailAddress(),

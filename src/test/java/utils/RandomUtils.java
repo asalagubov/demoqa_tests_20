@@ -1,11 +1,13 @@
 package utils;
 
 import com.github.javafaker.Faker;
+
+import java.util.Locale;
 import java.util.concurrent.ThreadLocalRandom;
 
-public class RandomUtils{
+public class RandomUtils {
 
-    static Faker faker = new Faker();
+    public static Faker faker = new Faker(new Locale("en"));
 
     public static int getRandomInt(int min, int max) {
         return ThreadLocalRandom.current().nextInt(min, max + 1);
@@ -52,9 +54,13 @@ public class RandomUtils{
         String[] hobby = {"Sports", "Reading", "Music"};
         return faker.options().option(hobby);
     }
-    // public static String getRandomHobbiestwo() {
-    //    String[] hobby = {};
-    //    return faker.options().option(hobby);
-    // }
 
+    public static String getRandomHobbiesTwo() {
+        String[] hobby = new String[]{getRandomHobbies()};
+        return faker.options().option(hobby);
+
+
+
+    }
 }
+

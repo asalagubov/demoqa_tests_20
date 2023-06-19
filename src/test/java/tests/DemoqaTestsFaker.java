@@ -3,14 +3,14 @@ package tests;
 import com.github.javafaker.Faker;
 import demoqa.pages.RegistrationPage;
 import org.junit.jupiter.api.Test;
+import utils.RandomUtils;
+
 import java.util.Locale;
 import static utils.RandomUtils.*;
 
 public class DemoqaTestsFaker extends TestBase {
-
         RegistrationPage registrationPage = new RegistrationPage();
-        Faker faker = new Faker(new Locale("en"));
-
+        RandomUtils randomUtils = new RandomUtils();
     String  firstName = faker.name().firstName(),
             lastName = faker.name().lastName(),
             email = faker.internet().emailAddress(),
@@ -20,8 +20,8 @@ public class DemoqaTestsFaker extends TestBase {
             month = getRandomMonth(),
             year = String.valueOf(getRandomInt(1900, 2100)),
             subject = getRandomSubject(),
-            hobbies1 = getRandomHobbies(),
-           // hobbies2 = getRandomHobbiestwo(),
+            hobbies1 = RandomUtils.getRandomHobbies(),
+            hobbies2 = RandomUtils.getRandomHobbiesTwo(),
             address = faker.address().fullAddress(),
             state = getRandomState(),
             city = getRandomCity(state),
@@ -42,7 +42,7 @@ public class DemoqaTestsFaker extends TestBase {
                     .setBirthDay(day, month, year)
                     .setSubjects(subject)
                     .setHobbies(hobbies1)
-                    //.setHobbiestwo(hobbies2)
+                    .setHobbiestwo(hobbies2)
                     .setUploadPicture(fileName)
                     .setAddress(address)
                     .setState(state)
@@ -57,7 +57,7 @@ public class DemoqaTestsFaker extends TestBase {
                     .verifyResult("Mobile", phoneNumber)
                     .verifyResult("Date of Birth", day + " " + month + "," + year)
                     .verifyResult("Subjects", subject)
-                    .verifyResult("Hobbies", hobbies1) //+ ", " + hobbies2)
+                    .verifyResult("Hobbies", hobbies1 + ", " + hobbies2)
                     .verifyResult("Picture",  fileName)
                     .verifyResult("Address", address)
                     .verifyResult("State and City", state + " " + city);

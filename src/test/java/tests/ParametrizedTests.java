@@ -1,6 +1,6 @@
 package tests;
 
-public class ParametrizedTests  extends TestBase {
+public class ParametrizedTests  extends ParametrizedTestBase {
 
 
 }

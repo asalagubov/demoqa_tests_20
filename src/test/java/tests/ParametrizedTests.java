@@ -30,15 +30,16 @@ public class ParametrizedTests extends ParametrizedTestBase {
 
     static Stream<Arguments> getTopicCategories() {
         return Stream.of(
-                Arguments.of("Женский", List.of("Звёзды" + "Психология" + "Еда" + "Любовь" + "Здоровье" + "Красота" + "Мода" + "Дети" + "Дом и сад")),
-                Arguments.of("Финансы", List.of("Экономика", "Компании", "Рынки Личный","счет", "Недвижимость", "Импортозамещение", "Курсы валют", "Конвертер валют", "Ещё")));
+                Arguments.of("Новости", List.of("В мире", "Новости Москвы", "Политика", "Общество", "Происшествия", "Наука и техника", "Шоу-бизнес", "Военные новости", "Аналитика", "Игры")),
+                Arguments.of("Финансы", List.of("Экономика", "Компании", "Рынки", "Личный счет", "Недвижимость", "Импортозамещение", "Курсы валют", "Конвертер валют", "Курс доллара", "Курс евро", "Ещё"))
+       );
     }
 
     @ParameterizedTest(name = "Соответствие списка категорий заданному топику {0}")
     @MethodSource("getTopicCategories")
     public void categoryShouldBeOpenAfterClick(String categoryName, List<String> buttonName) {
         open("https://www.rambler.ru/");
-        $(".rc__XaSn3 li").$(byText(categoryName)).click();
+        $(".rc__XaSn3").$(byText(categoryName)).click();
         $$("._3Ufez li").filter(visible).shouldHave(texts(buttonName));
     }
 
@@ -48,7 +49,7 @@ public class ParametrizedTests extends ParametrizedTestBase {
             "Oracle,  Oracle (Oracle Corporation) — американская корпорация, второй по размеру выручки разработчик программного обеспечения"
     })
     @ParameterizedTest(name = "При вводе в поиск {0} на старнице присутствует текст {1}")
-    @DisplayName("Проверка поиска статьи на wikipedia")
+    @DisplayName("Проверка статей в Wikipedia.org")
 
     void successfulSearchTextTest(String testData) {
         open("https://ru.wikipedia.org/");

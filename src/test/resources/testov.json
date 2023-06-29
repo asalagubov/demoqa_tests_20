@@ -1,0 +1,15 @@
+{
+  "id": 777,
+  "name": "Aleksandr",
+  "surname": "Salagubov",
+  "age": 26,
+  "email": "test@test.com",
+  "address": {
+    "street": "Tverskaya st.",
+    "city": "Moscow",
+    "state": "MOW",
+    "zipcode": "1010101"
+  },
+  "pets": ["dog", "cat", "pig"],
+  "working": true
+}

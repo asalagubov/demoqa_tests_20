@@ -28,7 +28,7 @@ public class ReadJsonFileTest {
         Assertions.assertEquals("dog", user.getPets().get(0));
         Assertions.assertEquals("cat", user.getPets().get(1));
         Assertions.assertEquals("pig", user.getPets().get(2));
-        Assertions.assertEquals(true, user.Working());
+        Assertions.assertEquals(true, user.getWorking());
 
 
 

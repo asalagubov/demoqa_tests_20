@@ -42,7 +42,7 @@ public class model {
         return pets;
     }
 
-    public boolean Working() {
+    public boolean getWorking() {
         return working;
     }
 

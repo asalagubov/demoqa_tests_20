@@ -22,7 +22,7 @@ public class ParsingFileTest {
             ZipEntry entryXls = zipFile.getEntry("test.xls");
             try (InputStream stream = zipFile.getInputStream(entryXls)) {
                 XLS xls = new XLS(stream);
-                Assertions.assertEquals("test11",
+                Assertions.assertEquals("test23",
                         xls.excel.getSheetAt(1).
                                 getRow(0)
                                 .getCell(0)
@@ -48,12 +48,14 @@ public class ParsingFileTest {
                 final String[] thirdRow = content.get(2);
                 final String[] fourthRow = content.get(3);
                 final String[] fifthRow = content.get(4);
+                final String[] sixthRow = content.get(5);
 
                 Assertions.assertArrayEquals(new String[]{"Number", "Name"}, firstRow);
                 Assertions.assertArrayEquals(new String[]{"1", "Aleksandr"}, secondRow);
                 Assertions.assertArrayEquals(new String[]{"2", "Aleksandr"}, thirdRow);
                 Assertions.assertArrayEquals(new String[]{"3", "Ivan"}, fourthRow);
                 Assertions.assertArrayEquals(new String[]{"4", "Ivan"}, fifthRow);
+                Assertions.assertArrayEquals(new String[]{"5", "Semen"}, sixthRow);
             }
         }
     }
